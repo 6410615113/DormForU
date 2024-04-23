@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">dorminfo</string>
+    <string name="facebook_campus"><a href="https://www.facebook.com/thecampusrangsit">The campus@TU Rangsit</a></string>
+    <string name="mail_campus"><a href="campus-tu@hotmail.com">campus-tu@hotmail.com</a></string>
+</resources>
