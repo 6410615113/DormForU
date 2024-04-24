@@ -26,6 +26,7 @@ import android.widget.Toast;
 import com.example.myapp.Dorm;
 import com.example.myapp.MainActivity;
 import com.example.myapp.R;
+import com.example.myapp.RegisterActivity;
 import com.example.myapp.ui.login.LoginViewModel;
 import com.example.myapp.ui.login.LoginViewModelFactory;
 import com.example.myapp.databinding.ActivityLoginBinding;
@@ -121,9 +122,11 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loadingProgressBar.setVisibility(View.VISIBLE);
-                loginViewModel.login(usernameEditText.getText().toString(),
-                        passwordEditText.getText().toString());
+//                loadingProgressBar.setVisibility(View.VISIBLE);
+//                loginViewModel.login(usernameEditText.getText().toString(),
+//                        passwordEditText.getText().toString());
+                Intent intent = new Intent(LoginActivity.this, Dorm.class);
+                startActivity(intent);
             }
         });
     }
