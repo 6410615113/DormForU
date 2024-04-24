@@ -34,7 +34,9 @@ import com.example.myapp.databinding.ActivityLoginBinding;
 public class LoginActivity extends AppCompatActivity {
 
     private LoginViewModel loginViewModel;
+    private TextView signup;
     private ActivityLoginBinding binding;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
@@ -126,6 +128,15 @@ public class LoginActivity extends AppCompatActivity {
 //                loginViewModel.login(usernameEditText.getText().toString(),
 //                        passwordEditText.getText().toString());
                 Intent intent = new Intent(LoginActivity.this, Dorm.class);
+                startActivity(intent);
+            }
+        });
+
+        signup = findViewById(R.id.Signup);
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(intent);
             }
         });
