@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#BEEDFF"
     tools:context=".Register"
     android:orientation="vertical"
     android:gravity="center"
@@ -22,7 +23,8 @@
     <!--Email-->
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:layout_margin="16sp">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/email"
             android:hint="@string/email"
@@ -33,7 +35,8 @@
     <!--Password-->
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:layout_margin="16sp">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/password"
             android:hint="@string/password"
@@ -51,8 +54,13 @@
     <Button
         android:id="@+id/btn_register"
         android:text="@string/register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="240sp"
+        android:layout_height="60sp"
+        android:backgroundTint="#00BCD4"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_margin="20sp" />
 
     <TextView
         android:textStyle="bold"
