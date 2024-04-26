@@ -7,4 +7,29 @@
     <string name="click_to_login">Click to login</string>
     <string name="click_to_register">Click to register</string>
     <string name="logout">Logout</string>
+    <string name="title_activity_dorm">dorm</string>
+    <!--    campus-->
+    <string name="facebook_campus"><a href="https://www.facebook.com/thecampusrangsit">The campus@TU Rangsit</a></string>
+    <string name="mail_campus"><a href="campus-tu@hotmail.com">campus-tu@hotmail.com</a></string>
+    <!--    accom-->
+    <string name="facebook_accom"><a href="https://www.facebook.com/accompark.official">Accom Park</a></string>
+    <string name="web_accom"><a href="https://www.accompark.com/">www.accompark.com</a></string>
+    <string name="mail_accom"><a href="accompark@gmail.com">accompark@gmail.com</a></string>
+    <!--    city-->
+    <string name="facebook_city"><a href="https://www.facebook.com/pages/City-Park-TU/417288588384250">City Park, TU</a></string>
+    <string name="web_city"><a href="https://cityparktu.com/citypark">cityparktu.com</a></string>
+    <!--    haus-->
+    <string name="facebook_haus"><a href="https://www.facebook.com/HausPrivateResidences/">Haus Private Residences</a></string>
+    <string name="web_haus"><a href="https://www.haus-tu.co/">www.haus-tu.co</a></string>
+    <!--    jpark-->
+    <string name="facebook_jpark"><a href="https://www.facebook.com/jparkthammasat/?locale=th_TH">JPark Residences หอพักใกล้ ม.ธรรมศาสตร์ ม.กรุงเทพ และศูนย์สอบธรรมศาสตร์</a></string>
+    <string name="web_jpark"><a href="https://jparkthammasat.com/">jparkthammasat.com</a></string>
+    <string name="mail_jpark"><a href="sales@jparkresidences.com">sales@jparkresidences.com</a></string>
+    <!--    sky view-->
+    <string name="facebook_sky"><a href="https://www.facebook.com/skyview.apartment/?locale=th_TH">สกายวิว อพาร์ทเมนต์</a></string>
+    <string name="web_sky"><a href="https://www.skyview-apartment.net/skyview_thammasat_rangsit">www.skyview-apartment.net/skyview_thammasat_rangsit</a></string>
+    <string name="mail_sky"><a href="skyview.apartment@gmail.com">skyview.apartment@gmail.com</a></string>
+    <!--    uhouse-->
+    <string name="web_uhouse"><a href="https://uhouserangsit.ugroupproperty.com/">uhouserangsit.ugroupproperty.com</a></string>
+    <string name="mail_uhouse"><a href="uhouse.rangsit@ugroupproperty.com">uhouse.rangsit@ugroupproperty.com</a></string>
 </resources>

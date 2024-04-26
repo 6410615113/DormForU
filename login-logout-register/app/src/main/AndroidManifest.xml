@@ -14,21 +14,45 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Material3.Light"
         tools:targetApi="34">
-
+        <activity
+            android:name=".uhouse"
+            android:exported="false" />
+        <activity
+            android:name=".tudio"
+            android:exported="false" />
+        <activity
+            android:name=".sky"
+            android:exported="false" />
+        <activity
+            android:name=".jpark"
+            android:exported="false" />
+        <activity
+            android:name=".haus"
+            android:exported="false" />
+        <activity
+            android:name=".city"
+            android:exported="false" />
+        <activity
+            android:name=".campus"
+            android:exported="false" />
+        <activity
+            android:name=".accom"
+            android:exported="false" />
+        <activity
+            android:name=".dorm"
+            android:exported="false" />
         <activity
             android:name=".AboutUs"
             android:exported="false" />
-
         <activity
             android:name=".First"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".Register"
             android:exported="false"
@@ -37,7 +61,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".Login"
             android:exported="true">
@@ -45,7 +68,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -54,6 +76,9 @@
                 android:value="" />
         </activity>
 
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

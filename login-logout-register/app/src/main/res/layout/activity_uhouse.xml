@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gray_bg"
+    tools:context=".uhouse">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cornerhead">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/top"
+        android:layout_width="394dp"
+        android:layout_height="69dp"
+        app:srcCompat="@drawable/header"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-4dp" />
+
+    <ScrollView
+        android:layout_width="314dp"
+        android:layout_height="608dp"
+        android:background="@drawable/gray_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.475">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F4F4F4"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#F4F4F4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#F4F4F4"
+                    android:fontFamily="@font/inter_semibold"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:text="U House"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="139dp"
+                android:background="#F4F4F4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="156dp"
+                    android:background="#F4F4F4"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="131dp"
+                        android:layout_height="136dp"
+                        android:layout_weight="1"
+                        android:background="#F4F4F4"
+                        android:paddingBottom="10dp"
+                        app:srcCompat="@drawable/uhouse_main" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#F4F4F4"
+                        android:fontFamily="@font/inter"
+                        android:paddingLeft="15dp"
+                        android:paddingBottom="10dp"
+                        android:text="ราคา/เดือน : 4,500 - 6,000 บาท/เดือน\nเงินประกัน :  โทรสอบถาม\nจ่ายล่วงหน้า : โทรสอบถาม\nค่าไฟ : 5 บาท/ยูนิต\nค่าน้ำ : 20 บาท/ยูนิต\n           (ขั้นต่ำ 100 บาท/เดือน)\nค่าบริการอื่นๆ : โทรสอบถาม\nค่าโทรศัพท์: -\nอินเตอร์เน็ต : ฟรี"
+                        android:textSize="10dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#F4F4F4">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#F4F4F4"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#F4F4F4"
+                        android:fontFamily="@font/inter"
+                        android:padding="2dp"
+                        android:text="ข้อมูลเพิ่มเติม"
+                        android:textColor="#575757"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#F4F4F4"
+                        android:fontFamily="@font/inter"
+                        android:padding="3dp"
+                        android:text="• ที่จอดรถ และ ที่จอดจักรยานยนต์แยกเป็นสัดส่วน\n• wifi Internet ความเร็วสูง\n• เครื่องทำน้ำอุ่นทุกห้อง\n• ระเบียงส่วนตัวทุกห้อง\n• ใกล้ ม.รังสิต เดินเพียง 200 เมตร\n• ใกล้แหล่งของกิน ( ร้านอาหาร,7-eleven, ร้านกาแฟ )\n• เครื่องซักผ้าหยอดเหรียญไว้บริการ\n• บริการซักรีด\n• ตู้น้ำหยอดเหรียญ"
+                        android:textColor="#575757"
+                        android:textSize="10dp" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#F4F4F4">
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="113dp"
+                    android:background="#F4F4F4">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="#F4F4F4"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/uhouse_1" />
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/uhouse_2" />
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/uhouse_3" />
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/uhouse_4" />
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/uhouse_5" />
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/uhouse_6" />
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/uhouse_7" />
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/uhouse_8" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#F4F4F4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#F4F4F4"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/uhouse_map"
+                        android:layout_width="match_parent"
+                        android:layout_height="311dp"
+                        android:background="#F4F4F4"
+                        app:srcCompat="@drawable/uhouse_m" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/moreinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#F4F4F4"
+                android:fontFamily="@font/inter"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:text="คำแนะนำเพิ่มเติม"
+                android:textColor="#575757"
+                android:textSize="12dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F4F4F4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#F4F4F4"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:background="@drawable/comment"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="65dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            app:srcCompat="@drawable/icons8_user_96" />
+                        <TextView
+                            android:layout_width="260dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/inter"
+                            android:paddingTop="8dp"
+                            android:paddingEnd="60dp"
+                            android:text="Kuromi\nห้องพักรายวัน คุ้มค่ากับราคา\nข้อดี...ที่พักดีมากกกก สะอาด กว้าง น้ำแรง มีลิฟ ที่จอดรถสะดวก "
+                            android:textColor="#575757"
+                            android:textSize="11dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:background="@drawable/comment"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="65dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            app:srcCompat="@drawable/icons8_user_96" />
+
+                        <TextView
+                            android:layout_width="260dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/inter"
+                            android:paddingTop="8dp"
+                            android:paddingEnd="60dp"
+                            android:text="My Melody\nสวย เงียบสงบ มีความเป็นส่วนตัวครับ เหมาะกับการพักผ่อน"
+                            android:textColor="#575757"
+                            android:textSize="11dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F4F4F4"
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp"
+                android:text="VIA CONTACT:"
+                android:textSize="12dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F4F4F4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F4F4F4"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#F4F4F4"
+                        android:orientation="horizontal"
+                        android:paddingBottom="5dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:background="#F4F4F4"
+                            android:rotation="270"
+                            app:srcCompat="@android:drawable/sym_action_call" />
+
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#F4F4F4"
+                            android:fontFamily="@font/inter"
+                            android:textSize="12dp"
+                            android:text="+66 (0) 2 901 7800, +66 (0) 81 498 8884" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#F4F4F4"
+                        android:orientation="horizontal"
+                        android:paddingBottom="5dp">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:background="#F4F4F4"
+                            app:srcCompat="@drawable/icons8_website_100"/>
+
+                        <TextView
+                            android:id="@+id/uhouse_web"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#F4F4F4"
+                            android:fontFamily="@font/inter"
+                            android:textSize="12dp"
+                            android:text="@string/web_accom" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#F4F4F4"
+                        android:orientation="horizontal"
+                        android:paddingBottom="30dp">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="25dp"
+                            android:layout_weight="1"
+                            android:background="#F4F4F4"
+                            app:srcCompat="@drawable/icons8_email_64__1_" />
+                        <TextView
+                            android:id="@+id/uhouse_mail"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#F4F4F4"
+                            android:fontFamily="@font/inter"
+                            android:textSize="12dp"
+                            android:text="@string/mail_accom"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#F4F4F4"
+                        android:orientation="horizontal"
+                        android:paddingBottom="10dp">
+                        <TextView
+                            android:id="@+id/fav"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#F4F4F4"
+                            android:fontFamily="@font/inter"
+                            android:text="add to favorite"
+                            android:textAlignment="textEnd"
+                            android:textSize="12dp" />
+                        <ImageView
+                            android:id="@+id/imageView7"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:background="#F4F4F4"
+                            android:paddingRight="90dp"
+                            app:srcCompat="@drawable/heart" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
