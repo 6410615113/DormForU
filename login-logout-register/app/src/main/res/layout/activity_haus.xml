@@ -415,14 +415,13 @@
                             android:text="add to favorite"
                             android:textAlignment="textEnd"
                             android:textSize="12dp" />
-                        <ImageView
-                            android:id="@+id/imageView7"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_weight="1"
-                            android:background="#F4F4F4"
-                            android:paddingRight="90dp"
-                            app:srcCompat="@drawable/heart" />
+                        <Button
+                            android:id="@+id/favBtn"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/ic_favorite_shadow_24dp"
+                            android:layout_marginEnd="18dp"
+                            android:layout_marginBottom="18dp"/>
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/CardView.Light"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp">
+
+    <ImageView
+        android:id="@+id/favImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/coffee01"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/favTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Latte"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_gravity="center|start"
+        android:layout_marginStart="120dp"/>
+
+    <Button
+        android:id="@+id/favBtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_favorite_red_24dp"
+        android:layout_gravity="center|end"
+        android:layout_marginEnd="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/bottom_bg">
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="10dp"
+            app:srcCompat="@drawable/icons8_building_100" />
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="10dp"
+            app:srcCompat="@drawable/heart" />
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="10dp"
+            app:srcCompat="@drawable/profile" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
