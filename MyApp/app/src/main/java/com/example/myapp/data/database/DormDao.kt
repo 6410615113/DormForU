@@ -1,6 +1,7 @@
 package com.example.myapp.data.database
 
 import androidx.room.Dao
+import androidx.room.Insert
 import androidx.room.Query
 
 @Dao
@@ -11,4 +12,6 @@ interface  DormDao {
     fun getDormOrderByArea(): List<DormDatabaseModel>
     @Query("SELECT * FROM DormDatabaseModel ORDER BY price ASC")
     fun getDormOrderByPrice(): List<DormDatabaseModel>
+    @Insert
+    fun insertAll(vararg dormDatabaseModel: DormDatabaseModel)
 }

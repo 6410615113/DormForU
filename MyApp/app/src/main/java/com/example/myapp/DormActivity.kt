@@ -1,5 +1,6 @@
 package com.example.myapp
 
+import android.app.Application
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -16,9 +17,11 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.myapp.ViewModel.PageViewFactory
 import com.example.myapp.ViewModel.PageViewModel
 import com.example.myapp.ui.materials.Dropdown
 import com.example.myapp.ui.materials.bottomBar
@@ -37,14 +40,17 @@ class DormActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = BackGroundColorTheme
                 ) {
-                    Page1()
+                    val pageViewModel: PageViewModel = viewModel(
+                        factory = PageViewFactory(LocalContext.current.applicationContext as Application)
+                    )
+                    Page1(pageViewModel)
                 }
             }
         }
     }
 }
 @Composable
-fun Page1(pageViewModel: PageViewModel = viewModel()) {
+fun Page1(pageViewModel: PageViewModel) {
     val filter: String by pageViewModel.filter.observeAsState("Area")
     val list = listOf("DormA", "DormB","DormC","DormD",
         "DormE", "DormF","DormG","DormH")
@@ -77,7 +83,10 @@ fun GreetingPreview2() {
             modifier = Modifier.fillMaxSize(),
             color = BackGroundColorTheme
         ) {
-            Page1()
+            val pageViewModel: PageViewModel = viewModel(
+                factory = PageViewFactory(LocalContext.current.applicationContext as Application)
+            )
+            Page1(pageViewModel)
         }
     }
 }
