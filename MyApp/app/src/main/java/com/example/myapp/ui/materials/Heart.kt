@@ -11,20 +11,26 @@ import androidx.compose.ui.graphics.StrokeJoin
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.example.myapp.ui.theme.MyAppTheme
 import com.example.myapp.ui.ui.theme.IconColor
 
 
 @Composable
-fun rememberHeartPlus(): ImageVector {
+fun rememberHeartPlus(
+    defaultWidth: Dp = 40.0.dp,
+    defaultHeight: Dp = 40.0.dp,
+    viewportWidth: Float = 40.0f,
+    viewportHeight: Float = 40.0f
+): ImageVector {
     return remember {
         ImageVector.Builder(
             name = "heart_plus",
-            defaultWidth = 40.0.dp,
-            defaultHeight = 40.0.dp,
-            viewportWidth = 40.0f,
-            viewportHeight = 40.0f
+            defaultWidth = defaultWidth,
+            defaultHeight = defaultHeight,
+            viewportWidth = viewportWidth,
+            viewportHeight = viewportHeight
         ).apply {
             path(
                 fill = SolidColor(IconColor),
@@ -95,7 +101,7 @@ fun rememberHeartPlus(): ImageVector {
 }
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun rememberHeartPlusPreview() {
     MyAppTheme {
         Image(
             imageVector = rememberHeartPlus(),
