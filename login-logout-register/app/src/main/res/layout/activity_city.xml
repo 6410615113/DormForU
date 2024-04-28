@@ -42,7 +42,7 @@
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#F4F4F4">
 
@@ -52,9 +52,18 @@
                     android:background="#F4F4F4"
                     android:fontFamily="@font/inter_semibold"
                     android:paddingBottom="10dp"
+                    android:text="City Park ธรรมศาสตร์ รังสิต"
                     android:textColor="@color/black"
-                    android:textSize="18dp"
-                    android:text="City Park ธรรมศาสตร์ รังสิต"/>
+                    android:textSize="18dp" />
+
+                <ImageView
+                    android:id="@+id/fav_btn"
+                    android:layout_width="50dp"
+                    android:layout_height="29dp"
+                    android:layout_gravity="end"
+                    android:clickable="true"
+                    android:paddingEnd="15dp"
+                    app:srcCompat="@drawable/heart" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView

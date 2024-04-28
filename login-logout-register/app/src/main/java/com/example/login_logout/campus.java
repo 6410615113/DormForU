@@ -17,6 +17,9 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class campus extends AppCompatActivity {
 
+    private ImageView fav_btn;
+    private boolean is_fav = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,5 +44,17 @@ public class campus extends AppCompatActivity {
         campus_facebook.setMovementMethod(LinkMovementMethod.getInstance());
         campus_facebook.setLinkTextColor(Color.BLACK);
 
+        fav_btn = findViewById(R.id.fav_btn);
+        fav_btn.setOnClickListener(view -> favorite());
+    }
+
+    private void favorite() {
+        if (!is_fav) {
+            fav_btn.setColorFilter(Color.RED);
+            is_fav = true;
+        } else {
+            fav_btn.clearColorFilter();
+            is_fav = false;
+        }
     }
 }

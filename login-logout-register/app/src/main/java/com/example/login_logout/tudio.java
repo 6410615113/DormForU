@@ -1,6 +1,7 @@
 package com.example.login_logout;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +15,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class tudio extends AppCompatActivity {
 
+    private ImageView fav_btn;
+    private boolean is_fav = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,5 +37,18 @@ public class tudio extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        fav_btn = findViewById(R.id.fav_btn);
+        fav_btn.setOnClickListener(view -> favorite());
+    }
+
+    private void favorite() {
+        if (!is_fav) {
+            fav_btn.setColorFilter(Color.RED);
+            is_fav = true;
+        } else {
+            fav_btn.clearColorFilter();
+            is_fav = false;
+        }
     }
 }
