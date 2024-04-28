@@ -13,8 +13,8 @@
     <!--Login-->
     <ImageView
         android:layout_width="208dp"
-        android:layout_height="296dp"
-        android:src="@drawable/header"/>
+        android:layout_height="210dp"
+        android:src="@drawable/header" />
 
     <!--Email-->
     <com.google.android.material.textfield.TextInputLayout
@@ -58,14 +58,16 @@
         android:backgroundTint="#00BCD4"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:textColor="#000"
-        android:layout_margin="20sp" />
+        android:textColor="#FFF"
+        android:layout_margin="20sp"
+        android:fontFamily="@font/inter_semibold"/>
 
     <TextView
         android:textStyle="bold"
-        android:textSize="15sp"
+        android:textSize="12sp"
         android:gravity="center"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/inter"
         android:id="@+id/loginNow"
         android:text="@string/click_to_login"
         android:layout_width="match_parent"

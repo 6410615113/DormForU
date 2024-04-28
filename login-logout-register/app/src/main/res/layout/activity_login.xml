@@ -16,7 +16,7 @@
 
     <ImageView
         android:layout_width="208dp"
-        android:layout_height="296dp"
+        android:layout_height="210dp"
         android:src="@drawable/header"/>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -62,13 +62,13 @@
         android:backgroundTint="#00BCD4"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:textColor="#000"
-        android:text="@string/login"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/inter_semibold"
+        android:text="LOGIN"
         android:layout_margin="20sp"/>
 
     <TextView
-        android:textStyle="bold"
-        android:textSize="15sp"
+        android:textSize="12sp"
         android:gravity="center"
         android:layout_marginTop="20dp"
         android:id="@+id/registerNow"
