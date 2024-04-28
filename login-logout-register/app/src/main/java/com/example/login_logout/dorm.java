@@ -21,7 +21,6 @@ public class dorm extends AppCompatActivity {
     private ImageView accom, campus, city, haus, jpark, sky, tudio, uhouse ;
 
     private Spinner spinner;
-    private SpinnerAdapter spinnerAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
