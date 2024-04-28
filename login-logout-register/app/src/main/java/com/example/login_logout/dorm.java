@@ -3,8 +3,10 @@ package com.example.login_logout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,8 +14,14 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class dorm extends AppCompatActivity {
     private ImageView accom, campus, city, haus, jpark, sky, tudio, uhouse ;
+
+    private Spinner spinner;
+    private SpinnerAdapter spinnerAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +32,18 @@ public class dorm extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        spinner = findViewById(R.id.spinner);
+        ArrayAdapter<String> adapter;
+        List<String> list;
+        list = new ArrayList<String>();
+        list.add("Area");
+        list.add("Price");
+        adapter = new ArrayAdapter<String>(getApplicationContext(),
+                android.R.layout.simple_spinner_item, list);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+
 
         campus = findViewById(R.id.campus);
         campus.setOnClickListener(new View.OnClickListener() {
