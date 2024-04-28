@@ -10,7 +10,7 @@ interface  DormDao {
     fun getAllSync():List<DormDatabaseModel>
     @Query("SELECT * FROM DormDatabaseModel ORDER BY location ASC")
     fun getDormOrderByArea(): List<DormDatabaseModel>
-    @Query("SELECT * FROM DormDatabaseModel ORDER BY price ASC")
+    @Query("SELECT * FROM DormDatabaseModel ORDER BY minPrice ASC")
     fun getDormOrderByPrice(): List<DormDatabaseModel>
     @Insert
     fun insertAll(vararg dormDatabaseModel: DormDatabaseModel)

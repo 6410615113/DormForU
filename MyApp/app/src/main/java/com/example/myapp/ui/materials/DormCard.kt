@@ -23,15 +23,19 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberImagePainter
 import com.example.myapp.MainActivity
+import com.example.myapp.data.database.DormDatabaseModel
 import com.example.myapp.ui.ui.theme.BackGroundColorTheme
 import com.example.myapp.ui.ui.theme.MyAppTheme
 
 @Composable
 fun dormCard(
+    dormObj: DormDatabaseModel,
     headline: String = "Headling",
     location: String = "Location",
-    Price: String = "6500 - 21000",
-    tel: String = "090697XXXX"
+    minPrice: Int = 6500,
+    maxPrice: Int = 7000,
+    tel: String = "090697XXXX",
+    imageUrl: String = "https://static.vecteezy.com/system/resources/thumbnails/025/220/125/small_2x/picture-a-captivating-scene-of-a-tranquil-lake-at-sunset-ai-generative-photo.jpg"
 ) {
     val context = LocalContext.current
     OutlinedCard(modifier = Modifier
@@ -59,7 +63,7 @@ fun dormCard(
         ){
             Box(modifier = Modifier.width(120.dp).height(120.dp).padding(8.dp)) {
                 val painter = rememberImagePainter(
-                    data = "https://static.vecteezy.com/system/resources/thumbnails/025/220/125/small_2x/picture-a-captivating-scene-of-a-tranquil-lake-at-sunset-ai-generative-photo.jpg",
+                    data = imageUrl,
                     builder = {
                     }
                 )
@@ -84,7 +88,7 @@ fun dormCard(
                         imageVector = rememberPriceChange(defaultHeight = 21.dp, defaultWidth = 21.dp),
                         contentDescription = null,
                     )
-                    Text(text = "$Price baht/month", maxLines = 1)
+                    Text(text = "$minPrice - $maxPrice baht/month", maxLines = 1)
 
                 }
                 Row {
@@ -103,6 +107,6 @@ fun dormCard(
 @Composable
 fun dormCardPreview() {
     MyAppTheme {
-        dormCard()
+//        dormCard()
     }
 }

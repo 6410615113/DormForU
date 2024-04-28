@@ -23,6 +23,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.myapp.ViewModel.PageViewFactory
 import com.example.myapp.ViewModel.PageViewModel
+import com.example.myapp.data.database.DormDatabaseModel
 import com.example.myapp.ui.materials.Dropdown
 import com.example.myapp.ui.materials.bottomBar
 import com.example.myapp.ui.materials.dormCard
@@ -52,11 +53,11 @@ class DormActivity : ComponentActivity() {
 @Composable
 fun Page1(pageViewModel: PageViewModel) {
     val filter: String by pageViewModel.filter.observeAsState("Area")
-    val list = listOf("DormA", "DormB","DormC","DormD",
-        "DormE", "DormF","DormG","DormH")
-    Column( modifier = Modifier.fillMaxSize()) {
-        topBar()
+    var v = DormDatabaseModel.DEFAULT_DORM
 
+    Column( modifier = Modifier.fillMaxSize()) {
+
+        topBar()
         Box(modifier = Modifier
             .fillMaxWidth()
             .padding(12.dp), contentAlignment = Alignment.CenterEnd) {
@@ -65,8 +66,23 @@ fun Page1(pageViewModel: PageViewModel) {
         Column(modifier = Modifier
             .verticalScroll(rememberScrollState())
             .weight(1f, fill = false)) {
-            list.forEach{value ->
-                dormCard(headline = value)
+            if(filter == "Area") {
+                v = v.sortedBy{ it.location }
+
+            }
+            else {
+                v = v.sortedBy { it.maxPrice }
+            }
+            v.forEach{value ->
+                dormCard(
+                    dormObj = value,
+                    headline = value.dormName,
+                    location = value.location,
+                    minPrice = value.minPrice,
+                    maxPrice = value.maxPrice,
+                    tel = value.tel,
+                    imageUrl = value.imageUrl
+                )
             }
 
         }
@@ -74,7 +90,6 @@ fun Page1(pageViewModel: PageViewModel) {
 
     }
 }
-
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview2() {
